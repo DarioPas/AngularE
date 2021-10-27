@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user';
+import { User } from './User';
 
 @Component({
   selector: 'app-user-details',
@@ -14,7 +14,7 @@ export class UserDetailsComponent implements OnInit {
     name: 'Mario',
     surname: 'Rossi',
     age: 30,
-    dateOfBirth: '14 Dicembre 1995',
+    dateOfBirth: new Date(1995, 11, 14),
     address: {
       city: 'Roma',
       street: 'Via Roma 10',
