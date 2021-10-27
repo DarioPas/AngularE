@@ -1,0 +1,19 @@
+<div class="container-user">
+  <p>Id : {{ person.id }}</p>
+  <p>Nome : {{ person.name }}</p>
+  <p>Cognome : {{ person.surname }}</p>
+  <p> Età : {{ person.age }}</p>
+  <p>Data di nascita : {{ person.dateOfBirth }}</p>
+  <p><b>Address:</b></p>
+  <p>Città : {{ person.address.city }}</p>
+  <p>Codice Postale : {{ person.address.postalCode }}</p>
+  <p>Strada : {{ person.address.street }}</p>
+  <p>Ruolo : {{ person.role }}</p>
+  <p>Ussername : {{ person.username }}</p>
+  <img src={{person.profilePhotoUrl}} alt="Foto di un gatto">
+  <p>Genere : {{person.gender}}</p>
+  <p><b>Company : {{person.companies[0].name}}</b></p>
+  <p>Descrizione : {{person.companies[0].description}}</p>
+  <p><b>Company : {{person.companies[1].name}}</b></p>
+  <p>Descrizione : {{person.companies[1].description}}</p>
+</div>
