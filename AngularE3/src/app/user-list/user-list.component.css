@@ -1,0 +1,10 @@
+.container-user {
+  display: flex;
+  align-items: center;
+}
+img {
+  border-radius: 30px;
+}
+.margin {
+  margin: 1rem;
+}

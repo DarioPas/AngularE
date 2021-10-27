@@ -1,0 +1,19 @@
+<div *ngFor='let person of users'>
+  <div class="container-user">
+    <div>
+      <p>{{person.id}}.</p>
+    </div>
+    <div>
+      <img src={{person.profilePhotoUrl}} alt="Foto Profilo" width="100px" height="100px">
+    </div>
+    <div class="margin">
+      <p><b>{{person.name}} {{person.surname}}</b></p>
+    </div>
+    <div class="margin">
+      <p>{{person.age}}</p>
+    </div>
+    <div class="margin">
+      <p>{{person.address.city}}</p>
+    </div>
+  </div>
+</div>
