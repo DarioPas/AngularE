@@ -1,0 +1,13 @@
+<div *ngIf="person.length > 0 ; else noUser">
+  <div *ngFor='let singleUser of person' class="display">
+    <p>{{singleUser.id}}.</p>
+    <img src={{singleUser.profilePhotoUrl}} alt="Foto Profilo" width="100px">
+    <p class="margin"><b>{{singleUser.name}} {{singleUser.surname}}</b></p>
+    <p class="margin">{{singleUser.age}}</p>
+    <p class="margin">{{singleUser.address.city}}</p>
+    <button (click)="submit(person.indexOf(singleUser))">Delete</button>
+  </div>
+</div>
+<ng-template #noUser>
+  <p>Nessun Utente Trovato</p>
+</ng-template>
