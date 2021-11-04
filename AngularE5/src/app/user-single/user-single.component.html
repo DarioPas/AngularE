@@ -1,5 +1,5 @@
 <div *ngIf="person.length > 0 ; else noUser">
-  <div *ngFor='let singleUser of person' class="display">
+  <div *ngFor='let singleUser of person' class="display" [ngClass]="changeColor(singleUser.role)">
     <p>{{singleUser.id}}.</p>
     <img src={{singleUser.profilePhotoUrl}} alt="Foto Profilo" width="100px">
     <p class="margin"><b>{{singleUser.name}} {{singleUser.surname}}</b></p>

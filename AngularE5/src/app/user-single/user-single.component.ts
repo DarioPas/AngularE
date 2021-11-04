@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { RouteReuseStrategy } from '@angular/router';
 import { User } from '../user-list/User';
 
 @Component({
@@ -18,4 +19,13 @@ export class UserSingleComponent implements OnInit {
     this.person.splice(a, 1)
   }
 
+  changeColor(role: string): any {
+    if (role === 'staff') {
+      return 'black';
+    } else if (role === 'admin') {
+      return 'green'
+    } else if (role === 'manager') {
+      return 'blue'
+    }
+  }
 }
