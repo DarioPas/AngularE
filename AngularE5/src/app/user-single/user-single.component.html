@@ -5,7 +5,7 @@
     <p class="margin"><b>{{user.name}} {{user.surname}}</b></p>
     <p class="margin">{{user.age}}</p>
     <p class="margin">{{user.address.city}}</p>
-    <button (click)="send(users.indexOf(user))">Delete</button>
+    <button (click)="send(user)">Delete</button>
   </div>
 </div>
 <ng-template #noUser>
