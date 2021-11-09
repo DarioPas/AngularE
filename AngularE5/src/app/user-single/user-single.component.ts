@@ -9,15 +9,15 @@ import { User } from '../models/User';
 })
 export class UserSingleComponent implements OnInit {
   @Input() users!: User[];
-  @Output() sendIndexUser = new EventEmitter<number>()
-  @Output() sendRole = new EventEmitter<string>()
+  @Output() sendIndexUser = new EventEmitter<User>()
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  send(a: number) {
-    this.sendIndexUser.emit(a);
+  send(u: User) {
+    this.sendIndexUser.emit(u);
   }
 
   changeColor(role: string): any {

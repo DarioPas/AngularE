@@ -65,8 +65,9 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit(a: number) {
-    this.users.splice(a, 1);
+  submit(u: User): void {
+    let n: number = this.users.indexOf(u);
+    this.users.splice(n, 1);
   }
 
 }
