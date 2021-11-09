@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { User } from '../user-list/User';
+import { User } from '../models/User';
 
 @Component({
   selector: 'app-user-single',
@@ -7,15 +7,16 @@ import { User } from '../user-list/User';
   styleUrls: ['./user-single.component.scss']
 })
 export class UserSingleComponent implements OnInit {
-  @Input() person!: User[];
+  @Input() users!: User[];
+  @Output() sendIndexUser = new EventEmitter<number>()
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  submit(a: number) {
-    this.person.splice(a, 1)
+  send(a: number) {
+    this.sendIndexUser.emit(a)
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User, Role, Gender } from './User';
+import { User, Role, Gender } from '../models/User';
 
 
 @Component({
@@ -63,6 +63,10 @@ export class UserListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  submit(a: number) {
+    this.users.splice(a, 1);
   }
 
 }
