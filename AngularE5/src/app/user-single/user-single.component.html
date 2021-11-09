@@ -1,11 +1,11 @@
-<div *ngIf="person.length > 0 ; else noUser">
-  <div *ngFor='let singleUser of person' class="display" [ngClass]="changeColor(singleUser.role)">
-    <p>{{singleUser.id}}.</p>
-    <img src={{singleUser.profilePhotoUrl}} alt="Foto Profilo" width="100px">
-    <p class="margin"><b>{{singleUser.name}} {{singleUser.surname}}</b></p>
-    <p class="margin">{{singleUser.age}}</p>
-    <p class="margin">{{singleUser.address.city}}</p>
-    <button (click)="submit(person.indexOf(singleUser))">Delete</button>
+<div *ngIf="users.length > 0 ; else noUser">
+  <div *ngFor='let user of users' class="display" [ngClass]="changeColor(user.role)">
+    <p>{{user.id}}.</p>
+    <img src={{user.profilePhotoUrl}} alt="Foto Profilo" width="100px">
+    <p class="margin"><b>{{user.name}} {{user.surname}}</b></p>
+    <p class="margin">{{user.age}}</p>
+    <p class="margin">{{user.address.city}}</p>
+    <button (click)="send(users.indexOf(user))">Delete</button>
   </div>
 </div>
 <ng-template #noUser>
